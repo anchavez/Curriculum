@@ -28,7 +28,18 @@
           	 'September',
           	 'November'
           	];
-
+            $myExcludeArrray =[
+            "April",
+            "September",
+            "December"
+            ];
+            foreach($myExcludeArrray as $myMounth){
+            if (!in_array("April", $monthExcludeArray)){
+                echo $myMounth;
+            }else{
+                echo "I dont";
+            }
+    
           	// code goes here ...
           ?>
         </p>

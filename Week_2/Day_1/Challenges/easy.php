@@ -12,7 +12,11 @@
 	<body>
         <p>
             <?php
-
+                  do {
+                      $t = rand(1,7); 
+                       echo $t . "<br />";
+                  } while( $t!=7);
+                  
           	    // code goes here ...
 
             ?>

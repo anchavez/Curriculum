@@ -14,9 +14,11 @@
             "Aric Schwartzenegger",
             "James Dallas"
         ];
-        
+        $teachers[0]= "anthony";
+        $teachers[1]= "anthony";
+        $teachers[2]= "anthony";
         print_r($teachers);
-        
+        var_dump ($teachers)
       ?>
       </p>
 	</body>

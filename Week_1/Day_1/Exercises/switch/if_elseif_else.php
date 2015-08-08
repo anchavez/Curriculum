@@ -12,7 +12,7 @@
         */
        
         // food you are looking up
-        $food = '';
+        $food = 'orange';
 
         // Fruits
         if($food == "grape" || $food == "lemon" || $food == "orange"  || $food == "banana"){

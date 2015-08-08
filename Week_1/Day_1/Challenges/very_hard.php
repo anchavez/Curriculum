@@ -16,6 +16,12 @@
     array('name' => 'Package 6', 'price' => 10.99),
     array('name' => 'Package 7', 'price' => 11.00),
   );
+  
+  sort ($packagesArray);
+  print_r($packagesArray);
+  
+  
+  
 ?>
 <!DOCTYPE html>
 <html>

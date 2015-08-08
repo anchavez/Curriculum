@@ -14,8 +14,10 @@
         <?php
 
             // code goes here...
-
-
+                for ($i=1;$i<=20;$i++){
+                    $t+=$i;
+                }
+                echo $t . "<br />";      
         ?>
     </p>
   </body>

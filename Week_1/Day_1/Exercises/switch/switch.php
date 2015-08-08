@@ -12,7 +12,7 @@
         */
        
         // food you are looking up
-        $food = '';
+        $food = 'tomato';
 
         switch ($food) {
           // fruits

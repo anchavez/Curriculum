@@ -13,7 +13,7 @@
 	<body>
         <p>
           <?php
-          	$name = 'Eric'; // this came from the previous page as a post variable
+          	$name = 'Alex'; // this came from the previous page as a post variable
 
           	// this came from the db
 			$nameToColorArray = [
@@ -27,7 +27,9 @@
 	          'Derek' => 'purple',
 	          'Tru' => 'red',
 	         ];
-
+				echo $nameToColorArray[$name];
+				
+				
 	         // code goes here
           ?>
         </p>
