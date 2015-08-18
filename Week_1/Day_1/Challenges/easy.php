@@ -16,7 +16,8 @@
 	<body>
         <p>
           <?php
-            $number = 3; // this came from the previous page as a post variable
+            
+            $number = rand(1,20); // this came from the previous page as a post variable
             switch ($number){
               case 1:
                 echo "one";
@@ -45,14 +46,14 @@
               case 9:
                 echo "nine";
                 break;
-              case 10: 
+              case $number > 10: 
                 echo "Nothing is greater than 10";
                 break;
       
               
               
             }
-          	// code goes here ...
+          	
           ?>
         </p>
 	</body>

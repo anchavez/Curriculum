@@ -50,7 +50,7 @@ function score($name){
         // Without writing a loop, use an array function to filter our list
         // of names down to only those who pass the score test.
            $passedNames = array_filter($names, 'score');
-
+        
         // Without writing a loop, print out the winners separated by a comma and a space
             print implode(', ',$passedNames);
 
@@ -58,6 +58,8 @@ function score($name){
 
 
         ?>
+
+    
 
     </p>
 

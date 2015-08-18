@@ -30,7 +30,7 @@
 				echo $nameToColorArray[$name];
 				
 				
-	         // code goes here
+	         
           ?>
         </p>
 	</body>

@@ -35,12 +35,12 @@
             ];
             foreach($myExcludeArrray as $myMounth){
             if (!in_array("April", $monthExcludeArray)){
-                echo $myMounth;
+                echo $myMounth . "<br />";
             }else{
                 echo "I dont";
             }
-    
-          	// code goes here ...
+            }
+          
           ?>
         </p>
 	</body>

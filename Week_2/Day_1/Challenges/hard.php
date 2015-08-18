@@ -14,7 +14,8 @@
 	 Divisible by 3 = ###
 	 Divisible by 6 = ###
 
-
+            if($i%3 === 0){
+            if($i%6 === 0){
  -->
 
 <!DOCTYPE html>
@@ -24,13 +25,35 @@
         <p>
 
             <?php
-               for($i=1;$>=100;$i++){
-                if ($i %3 !=0 ){
-                    $$i += 3 - ($i % 3);
-                }
-               }                
-              
-
+             // <!-- 
+              //for($i=1;$<=100;$i++){
+              //  if ($i %3 !=0 ){
+                   // $i += 3 - ($i % 3);
+               // }
+               //}                
+              //-->
+                 $divisableByThree = array();
+                 $alsoDivisableBySix = array();
+                 
+                        for($i=1;$i<=100;$i++){
+                            
+                            if($i%3 === 0){
+                            $divisableByThree[]= $i;  
+                            }
+                            
+                            if($i%6 === 0){
+                            array_push($alsoDivisableBySix,$i);
+                            }
+                        }   
+                        
+                        echo implode(',', $divisableByThree);
+                        echo '<br />';
+                        echo implode(',',$alsoDivisableBySix);
+                        echo '<br /><br />';
+                        echo "Divisible by 3 = " . count($divisableByThree);
+                        echo '<br />';
+                        echo "Divisible by 6 = " . count($alsoDivisableBySix);
+            
             ?>
         </p>
 	</body>

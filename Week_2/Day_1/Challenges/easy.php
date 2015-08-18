@@ -30,8 +30,11 @@
                        echo $t . "<br />";
                   } while( $t!=7);
                   
-          	    // code goes here ...
-
+                //   $n = 0;
+                //   while( $n!==7){
+                //       $n=rand(1,7);
+                //      echo $n;
+                //  }
             ?>
         </p>
 	</body>

@@ -23,14 +23,7 @@
             $score = $posA * $lenLast / $numWords;
             
             return $score > 5;
-                }
-       
-       
-       
-   
-        
-        
-        
+        }
         
         $names = [
             'JASON hunter',
