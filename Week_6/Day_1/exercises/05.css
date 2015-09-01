@@ -1,0 +1,48 @@
+/* Understanding Specificity, Classes, IDs, and Element Styles
+
+Make the following style changes:
+    
+    1 - let's create these default rules in this stylesheet:
+
+        - all elements should have their box-sizing property set to border-box
+        - body background-color to #000
+        - body text color to #fff
+        - body font family to Helvetica
+        - body font size to 16px
+        - body line height to 1.5
+
+        - set the h1 font-size to 32px, and h2 font-size to 28px
+
+        - make h2 italicized
+        
+        - .header-statement should have top and bottom padding of 5% and left and right padding of 10%, and text should be center-aligned
+
+        - .page-row should be full width, clear on both sides, hide any overflow, have top, bottom, left, and right padding of 5%, and top and bottom margin of 2%
+
+        - .cards should hide any overflow (*important for floats without a set-height wrapper)
+
+        - .card should have a width of 20%, margin of 2.5%, height of 300px, and float to the left
+
+        - .half-width should have a width of 48%, margin of 1%, height of 500px, and float to the right
+
+        - .hero should have a height 30%, width of 100%; make the background-size cover, repeat should be no-repeat, and make the background-attachment fixed
+
+    2 - let's set the hero background image to the magnaball.jpg found in the images folder
+
+    3 - create the background color classes seen in the markup with their respective colors as background colors (e.g. .bg-red should have a background of red)
+
+    4 - now let's build a masthead:
+
+        - set .masthead to be full-width, have a height of 100px, and line-height of 100px
+        - make .logo float left, and .navbar float right
+        - remove the browser-default padding and margin on .nav-list, and also remove the leading dots that appear before each list item
+        - make the .nav-links display in one row/line, and have a top & bottom padding of 5px and left & right padding of 15px
+        - set all link tags in masthead to text color white and remove the line underneath them
+
+    5 - last, let's set up the footer real quick:
+
+        - set .footer to be full-width, have a height of 100px, and line-height of 100px
+        - set .copyright to float to the left and .social-links to float to the right
+        - remove the styling for the social links like above for the nav links
+
+ */
