@@ -13,3 +13,43 @@ Make the following markup and style changes:
     5 - use only positioning to shift the last item in the ordered list up 4px and right 8px
 
  */
+ .headline{
+     float:left;
+     width:66%;
+ }
+.sub-headline{
+    float:left;
+    width:33%;
+}
+body{
+    height:2000px;
+}
+.div2{
+    background-color:purple;
+    height:100px;
+    width:100px;
+    top:0;
+    right:0;
+    position:fixed;
+}
+
+.div1 p,
+.div1 h2{
+    float:left;
+    height:400px;
+    width:50%;
+    
+}
+.container{
+    background-color:purple;
+    height:500px;
+    position:relative;
+}
+.child{
+    height:20px;
+    width:20px;
+    position:absolute;
+    bottom:0;
+    right:0;
+    background-color:orange;
+}

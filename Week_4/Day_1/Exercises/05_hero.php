@@ -40,7 +40,54 @@
     ///////////////////////////
     // Put your code here!
     ///////////////////////////
+     class LivingThing { 
+    protected $name;   
+    protected $health;
 
+    public function isAlive() {
+      return ($this->health > 0);
+    }
+    public function __construct($name, $health) {
+        $this->name = $name;
+        $this->health = $health;
+
+    }
+    public function getName() {
+        return $this->name;
+    }
+    public function getHealth() {
+        return $this->health;
+    }
+    public function setHealth($newHealth) {
+        $this->health = $newHealth;
+    }
+}
+
+     
+     
+    class Hero extends LivingThing {
+        public function attack($monster) {
+           $damagetoHero = rand(0, 10);
+           $this->health =  $this->health - $damagetoHero;
+           $damagetoMonster = rand(0, 10);
+           $monster->setHealth($monster->getHealth() - $damagetoMonster);
+           echo "{$this->name} took {$damagetoHero} damage. {$this->name} has {$this->health} health! <br />";
+           echo "{$monster->getName()} took {$damagetoMonster} damage. {$monster->getName()} has {$monster->getHealth()} health! <br />";
+        }
+        public function fight($monsters) {
+            foreach ($monsters as $monster) {
+                while ($this->isAlive() && $monster->isAlive()) {
+                $this->attack($monster);
+                    }
+                }
+            }
+        }
+    $hero = new Hero('Chuck', 100);
+    $rat = new LivingThing ('rat', 5);
+    $goblin = new LivingThing ('goblin', 30);
+    $ogre = new LivingThing ('ogre', 50);
+    
+    $monsters = array($rat, $goblin, $ogre);
 
     echo "<h3>A hero emerges!</h3>";
 

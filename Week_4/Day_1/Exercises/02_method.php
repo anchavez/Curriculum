@@ -20,7 +20,26 @@
     ///////////////////////////
     // Put your code here!
     ///////////////////////////
+     class LivingThing {
+        public $name;
+        public $health;
+        public function isAlive(){
+            if ($this->$health > 0){
+                return true;
+             // return ($this->health > 0);   
+            }
+        }
+    }
+    
+    
+    $monsters = array($rat, $goblin, $ogre);
+    
+    
+    echo "<h3>Monsters!</h3>";
 
+    foreach ($monsters as $monster) {
+        echo "<p>$monster->name: $monster->health</p>";
+    }
 
     echo "<h3>Are the monsters alive?</h3>";
 

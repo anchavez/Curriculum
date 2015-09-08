@@ -1,0 +1,25 @@
+.toggle{
+    cursor: pointer;
+    
+    margin-bottom: 20px;
+    
+}    
+
+
+
+.toggle__title:hover{
+    color:red;
+    text-decoration: underline;
+}
+
+
+.toggle__content{
+    display:none;
+    margin-top:10px;
+    
+}
+
+
+.toggle--open .toggle__content{
+    display: block;
+}

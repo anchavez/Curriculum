@@ -13,3 +13,30 @@ Make the following markup and style changes:
     5 - for the unordered list, make the leading dot/circle a hollow circle and create a space of 5px padding between the circle and text
 
  */
+.headline{
+    text-transform: uppercase;
+    text-align: right;
+    font-style: italic;
+    font-family: Helvetica;
+}
+.sub-headline{
+    background-color:green;
+    color:white;
+    border-width:2px;
+    border-style:groove;
+    border-color:white;
+    border-radius:2px;
+}
+.div1 .paragraphs-1,
+.div1 .paragraphs-2{
+    text-align:center;
+}
+.div .paragraphs-3{
+    text-align:justify;
+}
+.unordered-list {
+    list-style-type:circle;
+    text-indent:5px;
+    padding-left:5px;
+}
+    

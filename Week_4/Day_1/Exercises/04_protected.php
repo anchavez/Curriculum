@@ -24,15 +24,45 @@
     ///////////////////////////
     // Put your code here!
     ///////////////////////////
-
+     class LivingThing {
+        protected $name;
+        protected $health;
+        public function isAlive(){
+            if ($this->$health > 0){
+                return true;
+            
+            }
+         }
+        
+     public function __construct($name, $health) {
+         $this->name = $name;
+         $this->health = $health;
+         }
+     public function getName(){
+         return $this->name;
+     } 
+      public function gethealth(){
+          return $this->health;
+      }   
+     
+     
+         
+     }
+         
+    $rat = new LivingThing ('rat', 5);
+    $goblin = new LivingThing ('goblin', 30);
+    $ogre = new LivingThing ('ogre', 80);
+    
+    $monsters = array($rat, $goblin, $ogre);
+  
 
     echo "<h3>Protecting our monsters</h3>";
 
     foreach ($monsters as $monster) {
         // Fix the line below!
-        echo "<p>$monster->name: $monster->health</p>";
+        echo "<p>{$monster->getName()}: {$monster->getHealth()}</p>";
     }
-
+    
     ?>
 
 </p>

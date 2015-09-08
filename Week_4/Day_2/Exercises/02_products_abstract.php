@@ -84,6 +84,82 @@
         ///////////////////////////
         // Put your code here!
         ///////////////////////////
+        
+       interface Describable {
+          public function provideDescription();        
+        }
+        
+        
+          abstract class Product implements Describable(){
+        
+          protected $name;
+          protected $brand;
+          protected $price;
+          
+          public function __construct($name, $brand,$price){
+            $this->name = $name;
+            $this->brand = $brand;
+            $this->price = $price;
+            
+          }
+       
+          public function provideDescription(){
+            return $this->provideDescriptionForProductType();
+            
+          }
+          abstract public function provideDescriptionForProductType
+          }
+           
+           class chothing extends Product{
+           protected $size;
+            protected $gender;
+            protected $color;
+           }
+          public function __construct ($size,$color,$gender,$name,$brand,$price){
+            parent::__construct($name, $brand,$price);
+          
+            $this->size = $size;
+            $this->color= $color;
+            $this->gender = $gender;
+        
+        
+            public function provideDescriptionForProductType(){
+              echo "This is an article of clothing.  It is a {$this->brand} {$this->color} {$this->gender} {$this->type} of size {$this->size}.  It costs"
+              
+            } 
+            }
+        
+          }
+        
+          
+          class Television extends Product{
+            protected $displayType;
+            protected $size;            
+          
+            public function __construct($name, $brand,$price,$displayType,$size)
+            parent::__construct($name,$brand,$price)
+            $this->displayType = $displayType;          
+            $this->size = $size;
+            }
+          }
+        }
+        
+        $shirt= new Product("Hawaiian shirt", "Hang 10", 23.99, "Shirt With Flowers And Red in Color.  Size is Large.  Men Only.");
+        $television = new Product("4K Television", "TVs Unlimited", 100.00 ,"Small Televison (19 inches).  Has resolution of 4k");
+        $tv = new Product ("3D TV", "LV", 100.99, "Does not come with glasses");
+        $skirt = new Product ("Hawaiian Skirt", "Hang 10", 25, "Womens Skirt...Size 6");
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         ?>
     </p>
   </body>

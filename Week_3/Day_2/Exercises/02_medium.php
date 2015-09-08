@@ -43,12 +43,12 @@
                 $playerCards = array();
                 for($i=1; $i <=$number_of_cards; $i++) {
                     
-                    $randomSuit = rand(0,3);
+                    //  $randomSuit = rand(0,3);
                     $randomCard = rand(1,13);
-            
+                    
+                    
                     $deck[$ramdomcard][$ramdomcard];
-                    $suits = array_keys($deck);
-                    $suit = $suits[$randomSuit];
+                   
                     
                     $card = array_search($randomCard, $deck[$suit]);
                     array_push($playerCards, $card);

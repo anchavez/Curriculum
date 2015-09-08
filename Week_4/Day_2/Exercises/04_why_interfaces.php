@@ -4,7 +4,7 @@
   </head>
   <body>
     <p>
-    <?
+    <?php
         /**
          * So we want to create a feature that allows you to store your movies in our 'cloud'.
          *
@@ -37,6 +37,194 @@
         ///////////////////////////
         // Put your code here!
         ///////////////////////////
+   
+        interface Describable {
+          public function provideDescription();        
+        }
+        
+        class ItemDescriber {
+          public function outputDescription($Describable){
+          if ($Describable instanceof Describable){
+              return $Describable->provideDescription();
+          }else{
+             throw new exception('Does not implement the describable interface');   
+           }
+          }
+        }
+          
+          
+          abstract class Product implements Describable {
+        
+          protected $name;
+          protected $brand;
+          protected $price;
+          
+          public function __construct($name, $brand,$price){
+            $this->name = $name;
+            $this->brand = $brand;
+            $this->price = $price;
+            
+          }
+          
+          abstract function provideDescriptionForProductType();
+          
+          public function provideDescription(){
+            return $this->provideDescriptionForProductType;
+          } 
+          
+          public function cleanname() {
+            if (empty($this->name)){
+            throw new exception('is empty');
+            }
+            else{ 
+              return $this->name;
+            }
+          }
+          public function clenbrand(){
+           if (empty($this->brand)){
+             throw new exception('is bad');
+          } 
+           else{ 
+             return $this->brand;
+             }
+          }
+          public function cleanprice(){
+            if (empty($this->price)){
+              throw new exception('is free');
+            }
+            else { 
+              return $this->price;
+            }
+          }
+      }
+          
+          class Clothing extends Product {
+            protected $size;
+            protected $color;
+            protected $type;
+            protected $gender;
+         
+          public function __construct($name, $brand, $price, $size, $color, $type, $gender){
+            parent::__construct($name, $brand, $price);
+          $this->size = $size;
+          $this->color = $color;
+          $this->type = $type;
+          $this->gender = $gender;
+          }
+          public function getSize() {
+        if(empty($this->size)) {
+            throw new Exception("No size entered");
+        } else {
+            return $this->size;
+        }
+    }
+
+    public function getColor() {
+        if((($this->color == "red") || ($this->color == "blue") || ($this->color == "green") || ($this->color == "black") || ($this->color == "white") || ($this->color == "yellow")) == false) {
+            throw new Exception("Invalid color entered");
+        } else {
+            return $this->color;
+        }
+    }
+
+    public function getType() {
+        if(empty($this->type)) {
+            throw new Exception("No type entered");
+        } else {
+            return $this->type;
+        }
+    }
+
+    public function getGender() {
+        if(empty($this->gender)) {
+            throw new Exception("No gender entered");
+        } else {
+            return $this->gender;
+        }
+    }
+
+    public function provideDescriptionForProductType() {
+        try {
+            return 'This is an article of clothing. It is a ' .  $this->getBrand() . ' ' . $this->getColor() . ' ' . $this->getGender() . ' ' . $this->getType() . ' of size ' . $this->getSize() .  '. It costs ' . $this->getPrice() . '.';
+        } catch(Exception $e) {
+            echo 'There was an error determining the description to this product <br />' . $e->getMessage() . '<br />';
+        }
+    }
+
+}
+
+class Television extends Product {
+    protected $displaytype;
+    protected $size;
+
+    public function __construct($name, $brand, $price, $displaytype, $size) {
+        parent::__construct($name, $brand, $price);
+
+        $this->displaytype = $displaytype;
+        $this->size = $size;
+    }
+
+    public function getDisplayType() {
+        if(empty($this->displaytype)) {
+            throw new Exception("No display type entered");
+        } else {
+            return $this->displaytype;
+        }
+    }
+
+    public function getSize() {
+        if(empty($this->size)) {
+            throw new Exception("No size entered");
+        } else {
+            return $this->size;
+        }
+    }
+
+    public function provideDescriptionForProductType() {
+        return 'This is a ' . $this->getSize() . ' ' . $this->getBrand() . ' ' . $this->getDisplayType . ' Television';
+    }
+}
+
+
+     class CloudMovieFile implements Describable{
+          protected $name;
+          protected $gender;
+          protected $price;
+        
+        public function __construct($name, $gender, $price){
+          $this->name = $name;
+          $this->gender = $gender;
+          $this->price = $price;
+        }
+        public function provideDescription(){
+          
+          return 'My movie ' .  $this->name  . ' is like im doing this ' .  $this->gender  . ' and it cost ' . $this->price;
+        
+        }
+     }
+      $movieCloud = new CloudMovieFile('Anthony', 'action', 1000);
+     
+      
+      
+      
+      $TV = new Television("Giant TV", "Kramerica", 3900.90, "LED", "100inch");  
+      $clothing = new Clothing("Headband", "Nikee", 80, "large", "magenta", "headgear", "neutral");
+      $customerItems = new ItemDescriber();
+      $items = array($movieCloud, $TV, $clothing);
+      
+      
+      foreach ($items as $item){
+       try{
+          $ItemDe = new ItemDescriber();
+       } 
+       echo $customerItems->outputDescription($item);
+      }
+       catch(Exception $E){
+           echo $E->getmessage();
+       }
+   
+   
+   
     ?>
     </p>
   </body>

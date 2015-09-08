@@ -1,0 +1,25 @@
+.tabbed__navigation{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    
+}
+
+.tabbed__navigation__item{
+    display:inline-block;
+    cursor: pointer;
+    padding:10px;
+    border: 1px solid #000;
+}
+
+.tabbed__content{
+    margin-top:20px;
+    
+}
+
+.tabbed__content__item{
+    display:none;
+}
+.tabbed__content__item.is-active{
+    display:block;
+}

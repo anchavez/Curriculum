@@ -13,3 +13,20 @@ Make the following markup and style changes:
     5 - make all of the list items in the ordered list sit on the same row/line
 
  */
+.headline,
+.sub-headline{
+    display:inline;
+}
+.hidden{
+    display:none;
+}
+.paragraph-1{
+    display:block;
+}
+.div h2 {
+    display:inline-block;
+}
+.ordered-list li{
+    display:inline;
+    padding: 8px;
+}

@@ -25,8 +25,80 @@
     ///////////////////////////
     // Put your code here!
     ///////////////////////////
+   
+   
+    class ShoppingCart {
 
+    public $items = array();
 
+    function addItem($item) {
+        $this->items[] = $item;
+    }
+    
+    function getCostBeforeTax() {
+        
+        $sum = 0;
+         foreach($this->items as $item){
+            $sum += $item->price;
+         }
+         return $sum;
+          
+    }
+           
+    public function getTaxAmount() {
+        
+        $sum = 0;
+        foreach($this->items as $item) {
+        $sum += $item->tax * $item->price;    
+        }
+        
+        return $sum; 
+    }
+
+    public function getCostAfterTax() {
+        //return $this->getCostBeforeTax() + $this->getTaxAmount();
+        $price = $this->getCostBeforeTax();
+        $tax = $this->getTaxAmount();
+        return $tax + $price;
+        
+    }
+}
+
+class Item extends ShoppingCart{
+    public $name;
+    public $price;
+
+    function __construct($name, $price) {
+        $this->name = $name;
+        $this->price = $price;
+    }
+
+    function getName() {
+        return $this->name;
+    }
+
+    function getPrice() {
+        return $this->price;
+    }
+
+}
+
+class Book extends Item {
+   public $tax = 0;
+
+}
+
+class DVD extends Item {
+    public $tax = .05;
+}
+
+class VideoGame extends Item {
+    public $tax = .1;
+   
+}
+
+    
+    
     $cart = new ShoppingCart();
     $cart->addItem(new Book('Cheap Book', 2.99));
     $cart->addItem(new Book('Expensive Book', 24.99));

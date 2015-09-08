@@ -15,3 +15,34 @@
 <script>
     // Code here
 </script>
+for($i=1; $i<=100;$i++){
+if($i%3===0){
+echo "fizz";
+}
+if ($i%5===0){
+echo "buzz"
+}
+}
+
+<!DOCTYPE html>
+<html>
+function anagrams($string1,$string2){
+    
+        srting1= str_split($string1);
+        string2= str_split($string2);
+        sort($string1);
+        sort($string2);
+        $string=implode("",$string1);
+        $string= implode("",$string2);
+    
+        return ($string1===$string2);
+    }
+    if(anagrams($string, $string2){
+     echo true;
+    }else{
+    echo false;
+    }
+}
+
+
+</html>
