@@ -1,7 +1,7 @@
 window.onload = function(){
 
-var title = document.getElementById("title").
+var title = document.getElementById("title");
 setTimeout(function(){
-title.innerHTML = "goodbye world";
-}, 1000);    
+    title.innerHTML = "goodbye world";
+    }, 1000);    
 };

@@ -25,7 +25,7 @@ Make the following style changes:
 
         - .half-width should have a width of 48%, margin of 1%, height of 500px, and float to the right
 
-        - .hero should have a height 30%, width of 100%; make the background-size cover, repeat should be no-repeat, and make the background-attachment fixed
+        - .hero should have a height 800px, width of 100%; make the background-size cover, repeat should be no-repeat, and make the background-attachment fixed
 
     2 - let's set the hero background image to the magnaball.jpg found in the images folder
 
@@ -43,7 +43,7 @@ Make the following style changes:
 
         - set .footer to be full-width, have a height of 100px, and line-height of 100px
         - set .copyright to float to the left and .social-links to float to the right
-        - remove the styling for the social links like above for the nav links
+        - add the same styles to the social links as you did to the nav links above (padding and styles)
 
  */
 *{
